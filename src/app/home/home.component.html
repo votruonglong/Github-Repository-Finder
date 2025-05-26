@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="header">
+        <div class="header-img"></div>
+        <h1>Github Repository Finder</h1>
+    </div>
+    <select class="dropdown" id="language" (change)="onChange($event)">
+        <option value="''">Select a Language</option>
+        <option *ngFor="let item of languages" [value]="item.value">{{item.title}}</option>
+
+    </select>
+
+    <!-- Khi đang tải -->
+    <div *ngIf="loading" class="message loading">
+        Loading, please wait...
+    </div>
+
+    <!-- Khi có lỗi -->
+    <div *ngIf="err" class="message error">
+        Error fetching repositories
+    </div>
+
+    <!-- Khi chưa chọn ngôn ngữ nào -->
+    <div *ngIf="!repository && !loading && !err" class="message empty">
+        Please select a language
+    </div>
+
+    <div class="card" *ngIf="repository">
+        <div class="repo-name">
+            <strong>{{repository.name}}</strong>
+            <span class="external">↗</span>
+        </div>
+        <p class="description">
+            {{repository.description}}
+        </p>
+        <div class="repo-footer">
+            <span class="tag">🟡 {{repository.language}}</span>
+            <span><i class="fas fa-star"></i> {{repository.forks}}</span>
+            <span><i class="fas fa-code-fork"></i> {{repository.stargazers_count}}</span>
+            <span><i class="fa-regular fa-circle-xmark"></i> {{repository.open_issues_count}}</span>
+        </div>
+    </div>
+
+    <button *ngIf="err" class="retry" (click)="refresh()" type="button">Click to retry</button>
+    <button *ngIf="repository" class="refresh" (click)="refresh()" type="button">Refresh</button>
+</div>

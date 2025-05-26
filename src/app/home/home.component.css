@@ -1,0 +1,121 @@
+.container {
+    width: 350px;
+    border: 1px dashed #aaa;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.header-img {
+    width: 20px;
+    height: 20px;
+    background: black;
+    border-radius: 4px;
+}
+
+h1 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.dropdown {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid #000;
+    font-weight: 600;
+}
+
+.message {
+    text-align: center;
+    font-size: 14px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.empty {
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+.loading {
+    background-color: #f0f2f5;
+    color: #555;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    flex-direction: column;
+}
+
+.retry {
+    width: 100%;
+    background-color: #dc3545;
+    color: white;
+    font-weight: 600;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.card {
+    border: 1px solid #000;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.repo-name {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.external {
+    font-size: 14px;
+}
+
+.description {
+    font-size: 13px;
+    margin: 10px 0;
+    color: #8f8f8f;
+}
+
+.repo-footer {
+    display: flex;
+    gap: 10px;
+    font-size: 13px;
+    align-items: center;
+    color: #727272;
+}
+
+.tag {
+    background-color: #f7e8a5;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.refresh {
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
